@@ -1,0 +1,20 @@
+{% include "base.html" %}
+
+{% block content %}
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Abbreviation</th>
+        <th>Driver</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for team in res %}
+        <tr>
+          <td><a href="{{ url_for('main.drivers', driver=team.abbr) }}">{{ team.abbr }}</a></td>
+          <td>{{ team.name }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

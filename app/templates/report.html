@@ -1,0 +1,26 @@
+{% include "base.html" %}
+
+{% block content %}
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Place</th>
+        <th>Name</th>
+        <th>Team</th>
+        <th>Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for place, team in res %}
+        <tr>
+          <td>{{ place }}</td>
+          <td>{{ team.name }}</td>
+          <td>{{ team.team }}</td>
+          <td>{{ team.time }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+Order of report:
+{{ order }}
+{% endblock %}

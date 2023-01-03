@@ -1,0 +1,36 @@
+Example endpoint returning a list participants of racing
+In this example the specification is taken from external YAML file
+---
+parameters:
+  - name: order
+    in: path
+    type: string
+    enum: ['asc', 'desc']
+    required: false
+    default: asc
+  - name: format
+    in: path
+    type: string
+    enum: [ 'xml', 'json' ]
+    required: false
+    default: json
+definitions:
+  Order:
+    type: string
+  Format:
+    type: string
+responses:
+  200:
+    description: A list of participants (may be filtered by order)
+    examples:
+      asc: { "SVF": { "name": "Sebastian Vettel", "team": "FERRARI", "time": "0:01:04.415000", "place": 1 },
+             "VBM": { "name": "Valtteri Bottas", "team": "MERCEDES", "time": "0:01:12.434000", "place": 2 },
+             "SVM": { "name": "Stoffel Vandoorne", "team": "MCLAREN RENAULT", "time": "0:01:12.463000", "place": 3 },
+             "KRF": { "name": "Kimi R\u00e4ikk\u00f6nen", "team": "FERRARI", "time": "0:01:12.639000", "place": 4 },
+             "FAM": { "name": "Fernando Alonso", "team": "MCLAREN RENAULT", "time": "0:01:12.657000", "place": 5 },
+             "CLS": { "name": "Charles Leclerc", "team": "SAUBER FERRARI", "time": "0:01:12.829000", "place": 6 },
+             "SPF": { "name": "Sergio Perez", "team": "FORCE INDIA MERCEDES", "time": "0:01:12.848000", "place": 7 },
+             "RGH": { "name": "Romain Grosjean", "team": "HAAS FERRARI", "time": "0:01:12.930000", "place": 8 },
+             "PGS": { "name": "Pierre Gasly", "team": "SCUDERIA TORO ROSSO HONDA", "time": "0:01:12.941000", "place": 9 },
+             "CSR": { "name": "Carlos Sainz", "team": "RENAULT", "time": "0:01:12.950000", "place": 10 },
+      }
