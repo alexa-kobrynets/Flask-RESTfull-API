@@ -15,17 +15,17 @@ Functionality of API:
 	
 ## Technologies
 Project is created with:
-* Flask==2.2.2
-* Flask-Bootstrap==3.3.7.1
-* Jinja2==3.1.2
+* Flask 2.2.2
+* Flask-Bootstrap 3.3.7.1
+* Jinja2 3.1.2
 * SQLite
-* click==8.1.3
-* flasgger~=0.9.5
-* peewee~=3.15.3
-* pytest~=7.1.3
+* click 8.1.3
+* flasgger 0.9.5
+* peewee 3.15.3
+* pytest 7.1.3
 	
 ## Setup
-To run this project, install it locally using npm:
+To run this project:
 
 ```
 $ git pull https://github.com/alexa-kobrynets/Flask-RESTfull-API
